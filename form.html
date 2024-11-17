@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/logo-midas.jpg">
+    <title>Orçamento - Midas</title>
+    <link rel= "stylesheet" href="style.css"/>
+    <script src="validation.js" defer></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        .box {
+           margin: auto;
+           width: 600px;
+           background-image: linear-gradient(to right, rgb(220, 226, 230), rgb(47, 144, 161));
+           padding: 50px;
+           border-radius: 40px;
+           box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+           
+        }
+
+        .inputBox input {
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+     </style>
+</head>
+    <body>
+        <!-- Cabeçalho -->
+        <header>
+            <h1>Midas Locações e Serviços</h1><br>
+            <span class="links">
+                <a href="index.html">Home</a>
+                <a href="servicos.html">Produto</a>
+                <a href="form.html">Orçamento</a>
+            </span>
+            
+            <button id="toggle-dark-mode" aria-label="Alternar Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+
+        <!-- Orçamento -->
+        <div class="box">
+            <form id="form" action="process.php" method="post">
+                <fieldset>
+                    <legend><b>Orçamento do Cliente</b></legend>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="nome" id="name" class="inputUser"  required>
+                        <label for="nome">Nome completo</label>
+                        <span class="error" id="nomeError"></span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="email" id="email" class="inputUser" required>
+                        <label for="email">Email</label>
+                        <span class="error" id="emailError"></span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="phone" id="phone" class="inputUser" required>
+                        <label for="phone">Telefone</label>
+                        <span class="errorMessages" style="color: red;"></span>
+                    </div>
+                    <br>
+                    <br>
+                    <p><strong>Que serviços você deseja:</strong><br />
+                        <label>Manutenção
+                           <input name="servico" type="radio"
+                           value="manutencao" checked = "checked" id="manutencao" required/>
+                        </label>
+                       <label for="instalacao">Instalação
+                           <input name = "servico" type="radio"
+                           value = "instalacao" id="instalacao" required />
+                           </label>
+                           <label for="padronizacao">Padronização
+                               <input name = "servico" type="radio"
+                               value = "padronizacao" id="padronizacao" required />
+                               </label>
+                       <label for="vistoria">Vistoria
+                           <input name = "servico" type="radio"
+                           value="vistoria" id="vistoria" required/>
+                       </label>
+                       </p>
+                       <br>
+                       <br>
+
+                       <div class="inputBox">
+                        <label for="inicio_projeto"><b>Inicio do Projeto</b></label>
+                        <input type="date" name="inicio_projeto" id="inicio_projeto" class="inputUser" required>
+                        
+                       </div>
+                       <br>
+                       <br>
+                       <div class="inputBox">
+                        <input type="text" name="city" id="city" class="inputUser" required>
+                        <label for="city">Cidade</label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="state" id="state" class="inputUser" required>
+                        <label for="state">Estado</label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="excerpt" id="excerpt" class="inputUser" required>
+                        <label for="excerpt">Trecho</label>
+                    </div>
+                    <br>
+                    <br>
+                    <p><label><b>Observação:</b>Observação:<br />
+                        <textarea name = "comments"
+                        rows = "6" cols = "60"></textarea>
+                    </label></p>
+                    <br>
+                    <br>
+                    <p><strong>Tipo de pagamento:</strong><br />
+                        <label for="dinheiro">Dinheiro
+                           <input name="tipo_pagamento" type="radio"
+                           value="dinheiro" id="dinheiro" required/>
+                        </label>
+                       <label for="cartao">Cartão
+                           <input name = "tipo_pagamento" type="radio"
+                           value = "cartao" id="cartao" required />
+                           </label>
+                           <label for="pix">Pix
+                               <input name = "tipo_pagamento" type="radio"
+                               value = "pix" id="pix" required />
+                               </label>
+                       <label for="boleto">Boleto
+                           <input name = "tipo_pagamento" type="radio"
+                           value="boleto" id="boleto" required/>
+                       </label>
+                       </p>
+                       
+                    <br>
+                    <br>
+                    <input class= "btn" type="submit" value="Enviar"/>
+                    <input class= "btn" type="reset"  value="Limpar"/>
+                    
+
+                </fieldset>
+            </form>
+
+        </div>
+      
+
+        <!-- Rodapé -->
+        <footer>
+
+            <span class="bold">Midas Locações</span>
+            &copy; 2024 <br><br>
+            <div class="footer-content">
+                <div class="footer-section about">
+                  <h3>Sobre Nós</h3>
+                  <p>
+                    Somos uma empresa dedicada a oferecer os melhores produtos e serviços.
+                  </p>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contato</h3>
+                    <p>Email: midaslocacoes@hotmail.com</p>
+                    <p>Telefone: (81) 98396-2640</p>
+                </div>
+            </div>
+             <!-- mapa  -->
+             <div class="maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5583.66576952944!2d-35.97452083815145!3d-8.278104925281387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a98b3c7c35c3d5%3A0x951e8af779d3b223!2sPGF%20Telecom!5e0!3m2!1spt-BR!2sbr!4v1730134114584!5m2!1spt-BR!2sbr;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <form class="contato" action="send_contact.php" method="post">
+                    <h3>Entre em Contato</h3>
+                    <div class="inputform">
+                        <span><ion-icon name="person-outline"></ion-icon></span>
+                        <input type="text" class="input" placeholder="Nome">
+                    </div>
+                    <div class="inputform">
+                        <span><ion-icon name="paper-plane-outline"></ion-icon></span>
+                        <input type="email" class="input" placeholder="Email">
+                    </div>
+                    <div class="inputform">
+                        <span><ion-icon name="call-outline"></ion-icon></span>
+                        <input type="number" class="input" placeholder="Telefone">
+                        <br>
+                        <button class="botão">Enviar</button>
+                    </div>
+                </form>
+                <div id="mensagem"></div>
+             </div>
+            <!-- links redes sociais  -->
+            <nav class="redes">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100078483576684&mibextid=ZbWKwL" target="_blank">
+                            <img src="faceboo4.jpeg" alt="acesso facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/washingtonmodesto7?igsh=MWp3bHlkYm0yeGtidg==" target="_blank">
+                            <img src="instagran2.jpeg" alt="acesso instagran">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/logo-midas.jpg">
+    <title>Serviços - Midas</title>
+    <link rel= "stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+    <body>
+        <!-- Cabeçalho -->
+        <header>
+            <h1>Midas Serviços em Telecom</h1><br>
+            <span class="links">
+                <a href="index.html">Home</a>
+                <a href="servicos.html">Produto</a>
+                <a href="form.html">Orçamento</a>
+            </span>
+            
+            <div style="display: flex; justify-content: flex-start;">
+                <button class="share-button" onclick="compartilharPagina()">Compartilhe</button>
+            </div>
+
+            <button id="toggle-dark-mode" aria-label="Alternar Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+
+        <!-- Serviços imagens -->
+
+        <main class="container">
+            <section class="products-container">
+                <div class="card">
+                    <div class="product-image" id="img-1">
+                        <img src="imagens/acom fibra.jpg" alt="acom-fibra">
+                    </div>
+                    <h3>Serviços</h3>
+                    <p>Realização de acomodação de fibra ótica</p>
+                    <p> 
+                        <span class="bold">Faça seu Orçamento</span>
+                    </p>
+                    <a href="servico1.html" class="btn">Orçamento</a>
+                </div>
+                <div class="card">
+                    <div class="product-image" id="img-2">
+                        <img src="imagens/tecnico4.jpg" alt="tecnico4">
+                    </div>
+                    <h3>Serviços</h3>
+                    <p>Padronização de rede de fibra ótica.</p>
+                    <p>
+                        <span class="bold">Faça seu Orçamento</span>
+                    </p>
+                    <a href="servico2.html" class="btn">Orçamento</a>
+                </div>
+                <div class="card">
+                    <div class="product-image" id="img-3">
+                        <img src="imagens/tecnico3.jpg" alt="Epi">
+                    </div>
+                    <h3>Serviços</h3>
+                    <p>Readequação de rede de fibra ótica.</p>
+                    <p> 
+                        <span class="bold">Faça seu Orçamento</span>
+                    </p>
+                    <a href="servico3.html" class="btn">Orçamento</a>
+                </div>
+                <div class="card">
+                    <div class="product-image" id="img-4">
+                        <img src="imagens/fusão1.jpg" alt="fusao1">
+                    </div>
+                    <h3>Serviços</h3>
+                    <p>Efetuamos fusão de fibra ótica</p>
+                    <p> 
+                        <span class="bold">Faça seu Orçamento</span>
+                    </p>
+                    <a href="servico4.html" class="btn">Orçamento</a>
+                </div>
+                <div class="card">
+                    <div class="product-image" id="img-5">
+                        <img src="imagens/proj fibra2.jpg" alt="projeto">
+                    </div>
+                    <h3>Serviços</h3>
+                    <p>Lançamento de projetos de rede óptica.</p>
+                    <p> 
+                        <span class="bold">Faça seu Orçamento</span>
+                    </p>
+                    <a href="servico5.html" class="btn">Orçamento</a>
+                </div>
+                <div class="card">
+                    <div class="product-image" id="img-6">
+                        <img src="imagens/test fibra.jpeg.jpg" alt="teste-fibra">
+                    </div>
+                    <h3>Serviços</h3>
+                    <p>Realizamos teste em fibra ótica</p>
+                    <p> 
+                        <span class="bold">Faça seu Orçamento</span>
+                    </p>
+                    <a href="servico6.html" class="btn">Orçamento</a>
+                </div>
+                                          
+
+            </section>
+           
+        </main>
+
+        <!-- Rodapé -->
+        <footer>
+
+            <span class="bold">Midas Locações</span>
+            &copy; 2024 <br><br>
+            <div class="footer-content">
+                <div class="footer-section about">
+                  <h3>Sobre Nós</h3>
+                  <p>
+                    Somos uma empresa dedicada a oferecer os melhores produtos e serviços.
+                  </p>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contato</h3>
+                    <p>Email: midaslocacoes@hotmail.com</p>
+                    <p>Telefone: (81) 98396-2640</p>
+                </div>
+            </div>
+             <!-- mapa + fomrulário de contato  -->
+             <div class="maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5583.66576952944!2d-35.97452083815145!3d-8.278104925281387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a98b3c7c35c3d5%3A0x951e8af779d3b223!2sPGF%20Telecom!5e0!3m2!1spt-BR!2sbr!4v1730134114584!5m2!1spt-BR!2sbr;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <form class="contato" action="send_contact.php" method="post">
+                    <h3>Entre em Contato</h3>
+                    <div class="inputform">
+                        <span><ion-icon name="person-outline"></ion-icon></span>
+                        <input type="text" class="input" placeholder="Nome">
+                    </div>
+                    <div class="inputform">
+                        <span><ion-icon name="paper-plane-outline"></ion-icon></span>
+                        <input type="email" class="input" placeholder="Email">
+                    </div>
+                    <div class="inputform">
+                        <span><ion-icon name="call-outline"></ion-icon></span>
+                        <input type="number" class="input" placeholder="Telefone">
+                        <br>
+                        <button class="botão">Enviar</button>
+                    </div>
+                </form>
+             </div>
+            <!-- links redes sociais  -->
+            <nav class="redes">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100078483576684&mibextid=ZbWKwL" target="_blank">
+                            <img src="faceboo4.jpeg" alt="acesso facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/washingtonmodesto7?igsh=MWp3bHlkYm0yeGtidg==" target="_blank">
+                            <img src="instagran2.jpeg" alt="acesso instagran">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            
+            
+            
+
+
+        </footer>
+
+    </body>
+</html>

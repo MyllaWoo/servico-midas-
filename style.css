@@ -1,0 +1,496 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: helvetica;
+}
+
+/* padronização do nosso site */
+
+
+/* cabeçalho */
+header {
+    background-color: rgb(18, 18, 201);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 3px solid rgb(2, 2, 65);
+}
+.links {
+    word-spacing: 100px;
+}
+a {
+    color: rgb(111, 150, 165);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 0 15px;
+    transition: all 0.3s ease; /* Transição suave para efeitos */
+    display: inline-block; /* Garantir que fiquem em linha */
+}
+
+/* Efeito de movimento ao passar o mouse */
+a:hover {
+    transform: translateY(-5px); /* Movimento para cima */
+    color: #88b6fa; 
+}
+
+/* Adicionando um efeito de animação */
+a {
+    position: relative;
+    overflow: hidden;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #649bdb;
+    left: -100%;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+
+a:hover::after {
+    left: 0;
+}
+
+/* Serviços e Imagens */
+
+.container {
+    min-height: 60%;
+    padding: 50px;
+}
+
+/* Ajustar os cards para ter uma altura consistente */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: space-between;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(33% - 20px); 
+    min-height: 350px; 
+    border: 0.1px solid gray;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .product-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; 
+    overflow: hidden; 
+  }
+  
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease; 
+  }
+  
+  .product-image img:hover {
+    transform: scale(1.1); 
+  }
+  
+/* pagina individual de produtos */
+ 
+.but {
+    display: block;
+    width: 30%;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color:  rgb(23, 187, 236);
+    color: #fff;
+    padding: 15px;
+    border-radius: 30px;
+    transition: .5s;
+    
+}
+
+.but:hover {
+    background-color: rgb(2, 2, 65);
+}
+
+/* imagens pagina produto */
+img {
+    height: 250px;
+    width: 300px;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+h3 {
+    margin-bottom: 10px;
+    color: rgb(18, 18, 201) ;
+    border-left: 5px solid rgb(2, 2, 65) ;
+    padding-left: 7px;
+    font-size: 24px;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color:  rgb(18, 18, 201);
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.btn:hover {
+    background-color: rgb(2, 2, 65);
+}
+
+/* Estilização da animação da aba de imagens*/
+.product-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; 
+  }
+  
+  /* Efeito de zoom nas imagens quando o mouse passa por cima */
+  .product-image img:hover {
+    transform: scale(1.1); 
+  }
+  
+  /* Efeito de transição para os cards */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Eleva o card */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Sombras mais intensas */
+  }  
+
+/* pagina inicial - home */
+.Home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding:100px;
+}
+
+.home-test {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.teste-h4 {
+    font-family: "Oleo Script", system-ui;
+    font-weight: 400;
+    font-size: 60px;
+    color:rgb(2, 2, 65);
+    text-align: center;
+}
+
+.teste-h1{
+    font-weight: 400;
+    font-size: 24px;
+    color: rgb(18, 18, 201);
+    text-align: center;
+}
+
+p {
+    text-align:center;
+}
+
+/* carrossel - home */
+.carousel {
+    position: relative;
+    width: 200%;
+    max-width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;    
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* sobra efeito elevação*/
+
+    
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* rodapé */
+footer {
+    background-color:rgb(18, 18, 201);
+    color: #fff;
+    border-top: 3px solid rgb(2, 2, 65);
+    text-align: center;
+    padding: 80px;
+    
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #fff;
+}
+  
+.footer-section p, .footer-section a {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+  /* redes sociais  */
+.redes ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.redes ul a {
+    display: block;
+    padding: 50px;
+}
+
+.redes ul a img {
+    height: 30px;
+    width: 30px;
+    
+}
+
+/* mapa  */
+.maps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+     margin-bottom: 1rem;
+
+}
+
+/* fomrulário do mapa  */
+
+.contato {
+    background-color: #2373a8;
+    padding: 2rem;
+    width: 25rem;
+    height: auto;
+
+}
+
+form h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 1,5rem;
+}
+
+    
+
+.inputform .input {
+    width: 100%;
+    padding: 1,5rem;
+    background: #ccc;
+}
+
+.inputform span {
+    font-size: 1.5rem;
+    color: rgb(18, 16, 34);
+        
+}
+
+.botao {
+    margin-top: 2rem;       
+    font-size: 2rem;  
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    color: #ccc;
+    transition: .5s;
+}
+
+.botao:hover {
+    letter-spacing: 2px;
+    background-color: rgb(2, 2, 65)
+
+}
+
+/* Configurando o Dark mode*/
+/* Estilo padrão para o modo claro */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#toggle-dark-mode {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilo do ícone */
+#toggle-dark-mode i {
+    transition: color 0.3s ease;
+}
+
+/* Estilos para o modo escuro */
+body.dark-mode {
+    background-color: #121212 !important; /* Garante o fundo escuro */
+    color: #ffffff !important; /* Garante a cor do texto branca */
+}
+
+body.dark-mode #toggle-dark-mode i {
+    color: #ffffff !important;
+}
+
+/* Newsletter */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.newsletter {
+    font-family: "Times New Roman", Times, serif;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.newsletter h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    font-size: 16px;
+    color: #555;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.newsletter button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilizando botão de compartilhamento de conteúdo*/
+.share-button {
+    background-color: #2f8ce4; 
+    color: white; 
+    padding: 8px 16px; 
+    font-size: 14px; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+/* Estilo do botão quando o mouse está sobre ele */
+.share-button:hover {
+    background-color: #324d99; 
+}
+
+/* Estilo do botão quando ele é pressionado */
+.share-button:active {
+    background-color: #285392; 
+}
+
+/* Estilo de foco, para acessibilidade (quando o botão é selecionado com o teclado) */
+.share-button:focus {
+    outline: 2px solid #76c7c0; /* Borda de foco visível */
+}
